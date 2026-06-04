@@ -1,5 +1,3 @@
 # Make GitHub Linguist recognize .uac files as Autocode
 *.uac linguist-language=Autocode
 
-# Treat .uac as Assembly for VS Code syntax highlighting (Monokai has better support for Assembly)
-*.uac linguist-detect-asm
