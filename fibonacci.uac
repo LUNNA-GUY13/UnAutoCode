@@ -1,0 +1,15 @@
+c0 = 0.0          ; Line 1: Variable 'A' (f_n-2) initialized to 0
+c1 = 1.0          ; Line 2: Variable 'B' (f_n-1) initialized to 1
+c2 = 10.0         ; Line 3: Loop counter (We want 10 iterations)
+c3 = 1.0          ; Line 4: Hardcoded constant 1.0 for decrementing
+c4 = 0.0          ; Line 5: Hardcoded constant 0.0 for comparison
+c5 = 0.0          ; Line 6: Temporary holding register for calculation
+c5 = c0 + c1      ; Line 7: CORE MATH: Calculate next Fibonacci number
+c0 = c1           ; Line 8: Shift Variable B into Variable A
+c1 = c5           ; Line 9: Shift Next Number into Variable B
+c2 = c2 - c3      ; Line 10: Decrement loop counter by 1
+CONTROL 7 IF c2 > c4 ; Line 11: If counter (c2) > 0 (c4), jump back to Line 7
+; as you can see this is painful to write just do the math on paper or in python or something toddles!
+; also it would be cool if we had a goto command, it would make things easier
+; but what can we do? this is from 1952 for computer with less cpu power than a graphing calculator so RESPECT THIS!!!!!!
+; this is assembly but much more painful
