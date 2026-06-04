@@ -1,0 +1,41 @@
+{
+    "name": "unautocode",
+    "displayName": "UnAutoCode",
+    "description": "Language support for the UnAutoCode 1952 specification",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.75.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "unautocode",
+                "aliases": [
+                    "UnAutoCode",
+                    "unautocode"
+                ],
+                "extensions": [
+                    ".uac"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "unautocode",
+                "scopeName": "source.uac",
+                "path": "./syntaxes/unautocode.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "unautocode",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}

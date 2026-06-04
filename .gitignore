@@ -1,0 +1,14 @@
+# Compiled objects and executables
+*.o
+*.exe
+unautocode
+test_runner
+
+# VS Code extension build artifacts
+vscode-unautocode/*.vsix
+vscode-unautocode/node_modules/
+vscode-unautocode/out/
+
+# OS generated files
+.DS_Store
+Thumbs.db
