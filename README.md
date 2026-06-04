@@ -13,7 +13,7 @@ The project is built entirely in C and adheres strictly to the historical limita
 
 You can compile the engine using the included `Makefile`:
 
-```bash/shell
+```shell
 # Compile the main engine
 make
 
