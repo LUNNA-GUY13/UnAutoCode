@@ -1,0 +1,39 @@
+(* High-level program structure *)
+(*this grammer is for the "dead" autocode language*)
+program            = { line } ;
+line               = [ statement ] , newline ;
+
+(* Statement types allowed per line *)
+statement          = assignment_statement 
+                   | control_statement ;
+
+(* Core Statements *)
+assignment_statement = register , "=" , expression ;
+control_statement    = "CONTROL" , line_number , "IF" , condition ;
+
+(* Expressions and Math *)
+expression         = binary_operation 
+                   | operand ;
+
+binary_operation   = operand , operator , operand ;
+
+condition          = operand , rel_operator , operand ;
+
+(* Operands and Values *)
+operand            = register 
+                   | number ;
+
+register           = ( "c" | "C" ) , digit , { digit } ;
+
+(* Terminals and Tokens *)
+operator           = "+" | "-" | "*" | "/" ;
+
+rel_operator       = ">" | "<" | "==" | ">=" | "<=" ;
+
+number             = [ "-" ] , digit , { digit } , [ "." , { digit } ] ;
+
+line_number        = digit , { digit } ;
+
+digit              = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ;
+
+newline            = "\n" | "\r\n" ;
