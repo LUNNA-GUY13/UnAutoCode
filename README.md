@@ -13,15 +13,13 @@ The project is built entirely in C and adheres strictly to the historical limita
 
 You can compile the engine using the included `Makefile`:
 
-```bash
+```bash/shell
 # Compile the main engine
 make
 
 # Run the Fibonacci script
 ./unautocode fibonacci.uac
 
-# Run the test suite
-make test
 ```
 
 ## Language EBNF Grammar
